@@ -24,6 +24,10 @@ pip install numpy pillow python-pptx
 ```bat
 python video2ppt.py "课堂录屏.mp4" -o "整理后.pptx"
 ```
+若windows环境下，文件夹下有多个mp4文件，则可以通过命令行进行批量运行。
+```bat
+for %f in (*.mp4) do python video2ppt.py "%f" --workdir "_video2ppt_%~nf"
+```
 
 输出：
 
